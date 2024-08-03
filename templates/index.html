@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Stroke Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(https://cdn.pixabay.com/photo/2018/03/17/11/41/stroke-3233778_1280.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+        }
+
+        .container {
+
+            border: 1px solid green;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        form input[type="text"] {
+            width: calc(100% - 160px);
+            padding: 5px;
+        }
+
+        form input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: aliceblue;">Brain Stroke Prediction</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <label for="gender">Gender:</label>
+            <input type="text" name="gender" placeholder="Gender" required>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="text" name="age" placeholder="Age" required>
+            <br><br>
+            <label for="hypertension">Hypertension:</label>
+            <input type="text" name="hypertension" placeholder="Hypertension" required>
+            <br><br>
+            <label for="heart_disease">Heart Disease:</label>
+            <input type="text" name="heart_disease" placeholder="Heart Disease" required>
+            <br><br>
+            <label for="ever_married">Ever Married:</label>
+            <input type="text" name="ever_married" placeholder="Ever Married" required>
+            <br><br>
+            <label for="work_type">Work Type:</label>
+            <input type="text" name="work_type" placeholder="Work Type" required>
+            <br><br>
+            <label for="residence_type">Residence Type:</label>
+            <input type="text" name="Residence_type" placeholder="Residence Type" required>
+            <br><br>
+            <label for="avg_glucose_level">Avg Glucose Level:</label>
+            <input type="text" name="avg_glucose_level" placeholder="Avg Glucose Level" required>
+            <br><br>
+            <label for="bmi">BMI:</label>
+            <input type="text" name="bmi" placeholder="BMI" required>
+            <br><br>
+            <label for="smoking_status">Smoking Status:</label>
+            <input type="text" name="smoking_status" placeholder="Smoking Status" required>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
